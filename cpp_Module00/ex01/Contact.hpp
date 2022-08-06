@@ -6,72 +6,87 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 22:13:07 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/05 01:53:27 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/06 23:35:11 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-# ifndef CONTACT_HPP
-# define CONTACT_HPP
+#pragma once
 
 # include <iostream>
-# include "collors.hpp"
+# include "colors.hpp"
+
+using std::cout;
+using std::string;
+using std::cin;
+using std::endl;
 
 class	Contact {
 
-	std::string first_name;
-	std::string last_name;
-	std::string nickname;
-	std::string phone_number;
-	std::string darkest_secret;
+	string first_name;
+	string last_name;
+	string nickname;
+	string phone_number;
+	string darkest_secret;
 
 	public:
 		Contact(void);
 		~Contact(void);
 		// Contact(const Contact& copy);
 		// Contact &operator = (const Contact &contact);
+		string	get_firstname();
+		void	fill_contact(void);
 		void	display(void);
 };
 
 Contact::Contact()
 {
-	std::cout << SKY_BLEU << "such an awsome day to add new contact, fill those fields please :)"
-				<< RESET << std:: endl;
-	while (first_name.length() == 0)
-	{
-		std::cout << BLEU << "First name :" << std::endl;
-		getline(std::cin, first_name);
-	}
-	while (last_name.length() == 0)
-	{
-		std::cout << "last name :" << std::endl;
-		getline(std::cin, last_name);
-	}
-	while (nickname.length() == 0)
-	{
-		std::cout << "nickname:" << std::endl;
-		getline(std::cin, nickname);
-	}
-	while (phone_number.length() == 0)
-	{
-		std::cout << "phone number" << std::endl;
-		getline(std::cin, phone_number);
-	}
-	while (darkest_secret.length() == 0)
-	{
-		std::cout << "darckest secret" << std::endl;
-		getline(std::cin, darkest_secret);
-	}
-	std::cout << "contact succesfully added" << RESET << std::endl;
+	first_name = "";
+	last_name = "";
+	nickname = "";
+	phone_number  = "";
+	darkest_secret = "";
 }
+
 
 Contact::~Contact()
 {
 }
 
-void	Contact::display()
+string	Contact::get_firstname()
 {
-	std::cout << first_name;
+	return (first_name);
 }
 
-# endif
+int	get_field(const char *str, string& field)
+{
+	while (!field.length() && !cin.eof())
+	{
+		cout << UYellow << str << RESET << endl;
+		getline(cin, field);
+	}
+	if (cin.eof())
+		return (0);
+	return (1);
+}
+
+void	Contact::fill_contact()
+{
+	cout << BCyan << "such an awsome day to add new contact, fill those fields please :)"
+				<< RESET << endl;
+	if (!get_field("first name :", first_name))
+		exit(1);
+	if (!get_field("last name :", last_name))
+		exit(1);
+	if (!get_field("nickname:", nickname))
+		exit(1);
+	if (!get_field("phone number :", phone_number))
+		exit(1);
+	if (!get_field("darckest secret :", darkest_secret))
+		exit(1);
+	cout << BCyan << "contact succesfully added" << RESET << endl;
+}
+
+void	Contact::display()
+{
+	cout << first_name;
+}
