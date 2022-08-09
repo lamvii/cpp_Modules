@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 22:13:07 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/07 03:45:12 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/09 22:34:29 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 # include <iostream>
 # include <iomanip>
-# include "colors.hpp"
+# include "Colors.hpp"
 
 using std::cout;
 using std::string;
