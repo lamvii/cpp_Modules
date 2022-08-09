@@ -6,7 +6,7 @@
 #    By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/09 17:23:02 by ael-idri          #+#    #+#              #
-#    Updated: 2022/08/09 17:25:20 by ael-idri         ###   ########.fr        #
+#    Updated: 2022/08/09 17:28:52 by ael-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC		=	Account.cpp tests.cpp
 OBJ		=	$(SRC:.cpp=.o)
 CC		=	g++
 FLEAGS 	=	-Wall -Wextra -Werror -std=c++98
-NAME 	=	Awsome_PhoneBook
+NAME 	=	logs
 HEADER	=   Account.hpp
 RM 		=	rm -rf
 
