@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 20:26:25 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/11 20:36:26 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/12 00:04:41 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ class HumanB
 		// HumanA();
 		HumanB(string name);
 		~HumanB();
-		Weapon	*HumanB::setWeapon(string type);
+		void	setWeapon(Weapon &katana);
 		void	attack();
 };

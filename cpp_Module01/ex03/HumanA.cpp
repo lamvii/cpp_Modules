@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 20:01:55 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/11 20:23:54 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/12 00:09:58 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ HumanA::~HumanA()
 HumanA::HumanA(string name, Weapon& weapon)
 {
 	this->name = name;
-	this->waepon = weapon;
+	this->waepon = &weapon;
 }
 
 void	HumanA::attack(void)
 {
-	cout << name << " attacks with their " << waepon.getType() << endl;	
+	cout << name << " attacks with their " << waepon->getType() << endl;	
 }

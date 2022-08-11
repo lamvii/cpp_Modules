@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 20:02:00 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/11 20:25:49 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/11 23:57:26 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ class HumanA
 {
 	private:
 		string	name;
-		Weapon	waepon;
+		Weapon	*waepon;
 	public:
-		// HumanA();
 		HumanA(string name, Weapon& weapon);
 		~HumanA();
 		void	attack();

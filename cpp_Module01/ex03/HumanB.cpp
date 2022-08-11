@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 20:28:41 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/11 20:36:13 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/12 00:18:20 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ HumanB::HumanB(string name)
 	this->name = name;
 }
 
-Weapon	*HumanB::setWeapon(string type)
+void	HumanB::setWeapon(Weapon &katana)
 {
-
+	this->waepon = &katana;
 }
 
 void	HumanB::attack(void)
