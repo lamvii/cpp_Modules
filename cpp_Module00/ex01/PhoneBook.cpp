@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 03:28:40 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/07 03:43:31 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/14 16:58:29 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,4 +101,6 @@ void	PhoneBook::search()
 	std::stringstream(index) >> i;
 	if (i < 7)
 		array[i].display();
+	else
+		cout << Red << "invalid index :)" << RESET << endl;
 }

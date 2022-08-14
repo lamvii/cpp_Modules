@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 13:06:44 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/09 17:26:09 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/14 18:51:33 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ Account::Account( int initial_deposit )
 
 	_accountIndex = index; 
 	_amount = initial_deposit;
+	_nbDeposits = 0;
+	_nbWithdrawals = 0;
 
 	_nbAccounts++;
 	_totalAmount += initial_deposit;
