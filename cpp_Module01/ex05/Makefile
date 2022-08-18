@@ -6,7 +6,7 @@
 #    By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/17 18:06:18 by ael-idri          #+#    #+#              #
-#    Updated: 2022/08/17 18:07:17 by ael-idri         ###   ########.fr        #
+#    Updated: 2022/08/17 23:42:32 by ael-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC		=	main.cpp Harl.cpp
 OBJ		=	$(SRC:.cpp=.o)
 CC		=	g++
 FLEAGS	=	-Wall -Wextra -Werror -std=c++98
-NAME	=	file_replacement
+NAME	=	HARL
 HEADERS	=	Harl.hpp
 RM		=	rm -rf
 
