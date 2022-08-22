@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 22:41:23 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/11 01:02:07 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/20 21:23:57 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ class Zombie
 		Zombie();
 		~Zombie();
 		void	set_name(std::string name);
-		void	announce( void );	
+		void	announce( int val );	
 };
+   
