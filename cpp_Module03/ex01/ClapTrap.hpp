@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 19:18:51 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/23 22:40:54 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/23 23:21:01 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,17 @@ class ClapTrap
 		ClapTrap(const ClapTrap &copy);
 		ClapTrap &operator =(const ClapTrap &other);
 		~ClapTrap();
+
+		// setter
+		void set_name(string name);
+		void set_hit_points(unsigned int);
+		void set_energie(unsigned int);
+		void set_attack_damage(unsigned int);
+
+		// getter
+		string get_name();
+
+		// other function
 		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
