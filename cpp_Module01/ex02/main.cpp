@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 17:35:22 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/11 19:20:28 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/23 14:10:56 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int	main(void)
 	string	*stringPTR = &str;
 	string	&stringREF = str; 
 	
-	cout << "string adresse: " << &str << endl;
-	cout << "stringPTR adresse: " << stringPTR << endl;
-	cout << "stringREF adresse: " << &stringREF << endl;
+	cout << "string address: " << &str << endl;
+	cout << "stringPTR address: " << stringPTR << endl;
+	cout << "stringREF address: " << &stringREF << endl;
 
 	cout << "value of the string variable : " << str << endl;
 	cout << "value pointed to by stringPTR : " << *stringPTR << endl;
