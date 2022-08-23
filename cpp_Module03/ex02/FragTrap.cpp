@@ -1,52 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/23 23:15:54 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/24 00:20:41 by ael-idri         ###   ########.fr       */
+/*   Created: 2022/08/24 00:25:44 by ael-idri          #+#    #+#             */
+/*   Updated: 2022/08/24 00:29:20 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap()
+FragTrap::FragTrap()
 {
-	cout << "ScavTrap default constructor called" << endl;
+	cout << "FragTrap default constructor called" << endl;
 	this->set_hit_points(100);
-	this->set_energie(50);
-	this->set_attack_damage(20);
+	this->set_energie(100);
+	this->set_attack_damage(30);
 }
 
-ScavTrap::ScavTrap(string name)
+FragTrap::FragTrap(string name)
 {
 	this->set_name(name);
 	this->set_hit_points(100);
-	this->set_energie(50);
-	this->set_attack_damage(20);
-	cout << "ScavTrap " << this->get_name() << " called constructor with pram" << endl;
+	this->set_energie(100);
+	this->set_attack_damage(30);
+	cout << "FragTrap " << this->get_name() << " called constructor with pram" << endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &copy)
+FragTrap::FragTrap(const FragTrap &copy)
 {
 	*this = copy;
 }
 
-ScavTrap & ScavTrap::operator=(const ScavTrap &other)
+FragTrap & FragTrap::operator=(const FragTrap &other)
 {
 	// whithout using get :) let the base operater = do the work
 	ClapTrap::operator=(other);
 	return (*this);
 }
 
-ScavTrap::~ScavTrap()
+FragTrap::~FragTrap()
 {
-	cout << "ScavTrap " << this->get_name() << " called destructor" << endl;
+	cout << "FragTrap " << this->get_name() << " called destructor" << endl;
 }
 
-void ScavTrap::guardGate()
+void FragTrap::highFivesGuys(void)
 {
-	cout << "ScavTrap " << this->get_name() << " is now in Gate keeper mode" << endl;
+	cout << "FragTrap " << this->get_name() << ": high fives Guuuys :D" << endl;
 }
