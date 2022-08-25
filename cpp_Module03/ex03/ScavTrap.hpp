@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 21:41:51 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/25 18:11:48 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/25 19:11:20 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : public	ClapTrap
+class ScavTrap :virtual public	ClapTrap
 {
 	public:
 		ScavTrap();

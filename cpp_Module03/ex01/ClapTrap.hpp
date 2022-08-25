@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 19:18:51 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/23 23:21:01 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/25 18:04:13 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ class ClapTrap
 
 		// getter
 		string get_name();
+		unsigned int get_hit_p();
+		unsigned int get_energie();
+		unsigned int get_attack_damage();
 
 		// other function
 		void attack(const std::string& target);

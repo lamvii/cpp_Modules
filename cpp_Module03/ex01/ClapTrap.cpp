@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 19:18:48 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/23 23:31:00 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/25 18:05:34 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,4 +117,19 @@ void ClapTrap::set_attack_damage(unsigned int set)
 string ClapTrap::get_name()
 {
 	return (name);
+}
+
+unsigned int ClapTrap::get_hit_p()
+{
+	return (_hit_points);
+}
+
+unsigned int ClapTrap::get_energie()
+{
+	return (_energie_points);
+}
+
+unsigned int ClapTrap::get_attack_damage()
+{
+	return (_attack_damage);
 }

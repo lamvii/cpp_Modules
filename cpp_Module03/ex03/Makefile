@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/08/22 21:50:34 by ael-idri          #+#    #+#              #
-#    Updated: 2022/08/23 19:20:52 by ael-idri         ###   ########.fr        #
+#    Created: 2022/08/23 19:18:56 by ael-idri          #+#    #+#              #
+#    Updated: 2022/08/25 18:53:33 by ael-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC		=	main.cpp Fixed.cpp Point.cpp bsp.cpp
+SRC		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ		=	$(SRC:.cpp=.o)
 CC		=	g++
 FLEAGS	=	-Wall -Wextra -Werror -std=c++98
-NAME	=	Triangle
-HEADERS	=	Fixed.hpp Point.hpp
+NAME	=	DiamondTrap
+HEADERS	=	ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 RM		=	rm -rf
 
 

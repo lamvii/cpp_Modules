@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/23 21:41:51 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/25 18:11:48 by ael-idri         ###   ########.fr       */
+/*   Created: 2022/08/23 19:18:54 by ael-idri          #+#    #+#             */
+/*   Updated: 2022/08/25 18:56:26 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once 
+#include "DiamondTrap.hpp"
 
-#include "ClapTrap.hpp"
-
-class ScavTrap : public	ClapTrap
+int main()
 {
-	public:
-		ScavTrap();
-		ScavTrap(string name);
-		ScavTrap(const ScavTrap &copy);
-		ScavTrap &operator=(const ScavTrap &other);
-		~ScavTrap();
-		void attack(const std::string& target);
-		void guardGate();
-};
+	DiamondTrap hliwa("7liwa");
+
+	hliwa.attack("boss");
+	hliwa.guardGate();
+	hliwa.highFivesGuys();
+
+
+}

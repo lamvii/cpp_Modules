@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 21:41:51 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/23 23:15:52 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/25 17:58:48 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ class ScavTrap : public	ClapTrap
 		ScavTrap(const ScavTrap &copy);
 		ScavTrap &operator=(const ScavTrap &other);
 		~ScavTrap();
+		void attack(const std::string& target);
 		void guardGate();
 };
