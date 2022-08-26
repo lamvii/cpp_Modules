@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 19:18:48 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/25 18:08:15 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/26 15:23:05 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 				<< " can't beRepaired : energie points not enough" << endl;
 }
 
-void ClapTrap::set_name(string name)
+void ClapTrap::set_name(string _name)
 {
-	this->name = name;
+	this->name = _name;
 }
 
 void ClapTrap::set_hit_points(unsigned int set)

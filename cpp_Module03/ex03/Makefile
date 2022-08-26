@@ -6,14 +6,14 @@
 #    By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/23 19:18:56 by ael-idri          #+#    #+#              #
-#    Updated: 2022/08/25 22:34:07 by ael-idri         ###   ########.fr        #
+#    Updated: 2022/08/26 15:14:20 by ael-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC		=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 OBJ		=	$(SRC:.cpp=.o)
 CC		=	g++
-FLEAGS	=	-Wall -Wextra -Werror -std=c++98
+FLEAGS	=	-Wall -Wextra -Werror -std=c++98 
 NAME	=	DiamondTrap
 HEADERS	=	ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 RM		=	rm -rf
