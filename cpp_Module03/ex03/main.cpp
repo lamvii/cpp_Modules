@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 19:18:54 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/25 18:56:26 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/26 15:08:28 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,5 @@ int main()
 	hliwa.attack("boss");
 	hliwa.guardGate();
 	hliwa.highFivesGuys();
-
-
+	hliwa.whoAmI();
 }
