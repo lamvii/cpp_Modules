@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:50:57 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/23 18:42:15 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:02:48 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ Point::Point(const Point &copy): x(copy.x) , y(copy.y)
 //you cant change a const memember
 Point & Point::operator =(const Point &copy)
 {
+	(void)copy;
 	return (*this);
 }
 

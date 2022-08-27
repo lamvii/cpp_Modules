@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:53:27 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/22 21:36:26 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:02:26 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,37 @@
 
 Fixed::Fixed()
 {
+	cout << "Default constructor called" << endl;
 	value = 0;
 }
 
 Fixed::Fixed(const int val)
 {
+	cout << "Default constructor called" << endl;
 	value = val << bits;
 }
 
 Fixed::Fixed(const float val)
 {
+	cout << "Float constructor called" << endl;
 	value = val * (1 << bits);
 }
 
 Fixed::~Fixed()
 {
+	cout << "Destructor called" << endl;
 }
 
 Fixed::Fixed(const Fixed& copy)
 {
+	cout << "Copy constructor called" << endl;
 	// value = copy.value;
 	*this = copy;
 }
 
 Fixed & Fixed::operator = (const Fixed &fixed_p)
 {
+	cout << "Copy assignment operator called " << endl;
 	this->value = fixed_p.value;
 	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 15:49:36 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/20 20:27:56 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:00:10 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Fixed::Fixed()
 
 Fixed::Fixed(const int val)
 {
-	cout << "Int constructor called" << endl;
+	cout << "Default constructor called" << endl;
 	value = val << bits;
 }
 

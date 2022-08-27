@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 12:36:31 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/20 13:16:18 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:58:24 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Fixed::Fixed(const Fixed& copy)
 Fixed & Fixed::operator = (const Fixed &fixed_p)
 {
 	cout << "Copy assignment operator called " << endl;
-	this->value = getRawBits();
+	this->value = fixed_p.getRawBits();
 	return (*this);
 }
 
