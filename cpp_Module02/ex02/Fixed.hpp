@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:53:24 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/22 21:31:08 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/27 22:24:44 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ class Fixed
 		Fixed	&operator / (const Fixed &f);
 		
 		//  increment/decrement opertor overload
-		Fixed	operator ++( void );
+		Fixed	&operator ++( void );
 		Fixed	operator ++( int );
-		Fixed	operator --( void );
+		Fixed	&operator --( void );
 		Fixed	operator --( int );
 
 		//	other overloaded function

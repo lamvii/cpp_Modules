@@ -6,11 +6,12 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:53:27 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/27 20:02:26 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/27 23:11:51 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <math.h>
 
 Fixed::Fixed()
 {
@@ -20,14 +21,14 @@ Fixed::Fixed()
 
 Fixed::Fixed(const int val)
 {
-	cout << "Default constructor called" << endl;
+	cout << "constructor with param called" << endl;
 	value = val << bits;
 }
 
 Fixed::Fixed(const float val)
 {
 	cout << "Float constructor called" << endl;
-	value = val * (1 << bits);
+	value = round(val * (1 << bits));
 }
 
 Fixed::~Fixed()
@@ -62,7 +63,7 @@ void Fixed::setRawBits( int const raw )
 
 float 	Fixed::toFloat( void ) const
 {
-	return ( ((float)value) / 256);
+	return ( ((float)value) / 256.0f);
 }
 
 int 	Fixed::toInt( void ) const
@@ -75,87 +76,87 @@ int 	Fixed::toInt( void ) const
 
 bool	Fixed::operator > (const Fixed& f) const
 {
-	return (this->toFloat() > f.toFloat());
+	return (this->value > f.value);
 }
 
 bool	Fixed::operator < (const Fixed& f) const
 {
-	return (this->toFloat() < f.toFloat());
+	return (this->value < f.value);
 }
 
 bool	Fixed::operator >= (const Fixed& f) const
 {
-	return (this->toFloat() >= f.toFloat());
+	return (this->value >= f.value);
 }
 
 bool	Fixed::operator <= (const Fixed& f) const
 {
-	return (this->toFloat() <= f.toFloat());
+	return (this->value <= f.value);
 }
 
 bool	Fixed::operator == (const Fixed& f) const
 {
-	return (this->toFloat() == f.toFloat());
+	return (this->value == f.value);
 }
 
 bool	Fixed::operator != (const Fixed& f) const
 {
-	return (this->toFloat() != f.toFloat());
+	return (this->value != f.value);
 }
 
 // arithmetic operator overload
 
 Fixed&	Fixed::operator + (const Fixed &f)
 {
-	this->value = (this->toFloat() + f.toFloat()) * (1 << bits);
+	this->value = this->value + f.value;
 	return (*this);
 }
 
 Fixed&	Fixed::operator - (const Fixed &f)
 {
-	this->value = (this->toFloat() - f.toFloat()) * (1 << bits);
+	this->value = this->value - f.value;
 	return (*this);	
 }
 
 Fixed&	Fixed::operator * (const Fixed &f)
 {
-	this->value = (this->toFloat() * f.toFloat()) * (1 << bits);
+	this->value = roundf((this->value * f.value) / (1 << bits));
 	return (*this);
 }
 
 Fixed&	Fixed::operator / (const Fixed &f)
 {
-	this->value = (this->toFloat() / f.toFloat()) * (1 << bits);
+	this->value = round(this->toFloat() / f.toFloat() * (1 << bits));
 	return (*this);
 }
 
 //  operator overload
 //		++obj
-Fixed	Fixed::operator ++( void )
+Fixed	&Fixed::operator ++( void )
 {
-	this->value += ((float) 1 /(1 << bits)) * (1 << bits);
-	Fixed tem = *this;
-	return(tem);
+	this->value += 1;
+	return(*this);
 }
+
 //		obj++
 Fixed	Fixed::operator ++( int )
 {
 	Fixed tem = *this;
-	this->value += ((float)1 /(1 << bits)) * (1 << bits);
+	this->value += 1;
 	return(tem);
 }
+
 //		--obj
-Fixed	Fixed::operator --( void )
+Fixed	&Fixed::operator --( void )
 {
-	this->value -= ((float)1 / (1 >> bits)) * (1 << bits);
-	Fixed tem = *this;
-	return(tem);
+	this->value -= 1;
+	return(*this);
 }
 //		obj--
 Fixed	Fixed::operator --( int )
 {
 	Fixed tem = *this;
-	this->value -=  ((float)1 /(1 >> bits)) * (1 << bits);
+	this->value -= 1;
 	return(tem);
 }
 
