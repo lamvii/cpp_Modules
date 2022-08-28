@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:51:32 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/28 15:22:23 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/28 20:54:50 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,19 @@ int main( void )
 	Fixed f(3);
 	Fixed u(2.3f);
 	Fixed g(0.4f);
-	// Fixed u(2.123f);
-	// Fixed g(2.12f);
 	Fixed y = e / f;
 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 	std::cout << e / f << std::endl;
 	std::cout << y + y + y << std::endl;
-	// std::cout << u + g << std::endl;
-	// std::cout << a << std::endl;
-	// std::cout << a << std::endl;
-	// std::cout << ++a << std::endl;
-	// std::cout << a << std::endl;
-	// std::cout << a++ << std::endl;
-	// std::cout << a << std::endl;
-	// std::cout << b << std::endl;
-	// std::cout << Fixed::max( a, b ) << std::endl;
+	std::cout << u + g << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << Fixed::max( a, b ) << std::endl;
 
 	return 0;
 }
