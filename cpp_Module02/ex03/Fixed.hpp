@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:53:24 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/27 22:24:44 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/28 15:21:59 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ class Fixed
 		bool	operator != (const Fixed& f) const;
 		
 		// arithmetic operator overload
-		Fixed	&operator + (const Fixed &f);
-		Fixed	&operator - (const Fixed &f);
-		Fixed	&operator * (const Fixed &f);
-		Fixed	&operator / (const Fixed &f);
+		Fixed	operator + (const Fixed &f);
+		Fixed	operator - (const Fixed &f);
+		Fixed	operator * (const Fixed &f);
+		Fixed	operator / (const Fixed &f);
 		
 		//  increment/decrement opertor overload
 		Fixed	&operator ++( void );

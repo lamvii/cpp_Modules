@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:53:27 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/27 23:11:51 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/28 15:35:33 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,28 +106,32 @@ bool	Fixed::operator != (const Fixed& f) const
 
 // arithmetic operator overload
 
-Fixed&	Fixed::operator + (const Fixed &f)
+Fixed	Fixed::operator + (const Fixed &f)
 {
-	this->value = this->value + f.value;
-	return (*this);
+	Fixed	plus;
+	plus.value = this->value + f.value;
+	return (plus);
 }
 
-Fixed&	Fixed::operator - (const Fixed &f)
+Fixed	Fixed::operator - (const Fixed &f)
 {
-	this->value = this->value - f.value;
-	return (*this);	
+	Fixed minus;
+	minus.value = this->value - f.value;
+	return (minus);	
 }
 
-Fixed&	Fixed::operator * (const Fixed &f)
+Fixed	Fixed::operator * (const Fixed &f)
 {
-	this->value = roundf((this->value * f.value) / (1 << bits));
-	return (*this);
+	Fixed	multiple;
+	multiple.value = roundf((this->value * f.value) / (1 << bits));
+	return (multiple);
 }
 
-Fixed&	Fixed::operator / (const Fixed &f)
+Fixed	Fixed::operator / (const Fixed &f)
 {
-	this->value = round(this->toFloat() / f.toFloat() * (1 << bits));
-	return (*this);
+	Fixed division;
+	division.value = roundf(((float)this->value / f.value) * (1 << bits));
+	return (division);
 }
 
 //  operator overload
