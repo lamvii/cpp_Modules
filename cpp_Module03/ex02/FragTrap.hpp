@@ -6,13 +6,13 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 00:13:44 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/25 18:10:22 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/29 00:33:59 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap
 {

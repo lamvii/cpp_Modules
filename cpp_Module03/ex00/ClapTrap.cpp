@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 19:18:48 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/23 21:39:08 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/29 00:27:03 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,22 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(string name)
 {
-	cout << " constructor with param ( string ) called" <<endl;
 	this->name = name;
 	_hit_points = 10;
 	_energie_points = 10;
 	_attack_damage = 0;
+	cout << "ClapTrap " << name << " called constructor with param" <<endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
-	// cout << "copy constructor called" <<endl;
+	cout << "ClapTrap called copy constructor" <<endl;
 	*this = copy;
 }
 
 ClapTrap & ClapTrap::operator =(const ClapTrap &other)
 {
-	// cout << "assignment operator called" <<endl;
+	cout << "ClapTrap called assignment operator" <<endl;
 	name = other.name;
 	_hit_points = other._hit_points;
 	_energie_points = other._energie_points;
@@ -48,7 +48,7 @@ ClapTrap & ClapTrap::operator =(const ClapTrap &other)
 
 ClapTrap::~ClapTrap()
 {
-	cout << " destructor called" <<endl;
+	cout << " ClapTrap " << name << " destructor called" <<endl;
 }
 
 void ClapTrap::attack(const std::string& target)

@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 19:18:48 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/26 15:23:05 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/29 00:21:22 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ ClapTrap::ClapTrap(string name)
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
-	// cout << "copy constructor called" <<endl;
+	cout << "copy constructor called" <<endl;
 	*this = copy;
 }
 
 ClapTrap & ClapTrap::operator =(const ClapTrap &other)
 {
-	// cout << "assignment operator called" <<endl;
+	cout << "assignment operator called" <<endl;
 	name = other.name;
 	_hit_points = other._hit_points;
 	_energie_points = other._energie_points;

@@ -6,24 +6,21 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 19:18:54 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/24 00:30:51 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/29 00:38:56 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
-	ClapTrap	ido("ido");
-	ClapTrap	aissa("aissa");
-	ScavTrap	hliwa("7liwa");
-	FragTrap	smart("smart");
+	FragTrap	hliwa("7liwa");
+	ScavTrap	dog("Dog");
 
-	ido.beRepaired(666);
-	aissa.takeDamage(10);
-	aissa.takeDamage(10);
-	hliwa.attack("ido");
-	hliwa.guardGate();
-	smart.attack("boss");
-	smart.highFivesGuys();
+	hliwa.attack("boss");
+	dog.guardGate();
+	dog.attack("Boss");
+	hliwa.highFivesGuys();
+	hliwa.takeDamage(2000);
 }

@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 00:25:44 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/25 18:23:40 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/29 00:19:43 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,13 @@ FragTrap::FragTrap(string name): ClapTrap(name)
 
 FragTrap::FragTrap(const FragTrap &copy)
 {
+	cout << "FragTrap called copy constructor" << endl;
 	*this = copy;
 }
 
 FragTrap & FragTrap::operator=(const FragTrap &other)
 {
-	// whithout using get :) let the base operater = do the work
+	cout << "FragTrap called assignment operator" << endl;
 	ClapTrap::operator=(other);
 	return (*this);
 }

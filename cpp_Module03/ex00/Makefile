@@ -6,7 +6,7 @@
 #    By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/23 19:18:56 by ael-idri          #+#    #+#              #
-#    Updated: 2022/08/25 22:34:38 by ael-idri         ###   ########.fr        #
+#    Updated: 2022/08/28 23:55:08 by ael-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ all 	:	$(NAME)
 $(NAME) :	$(OBJ) $(HEADERS)
 			$(CC) $(FLEAGS) -o $(NAME) $(OBJ)
 
-%.o		:	%.cpp %.hpp
+%.o		:	%.cpp $(HEADERS)
 			$(CC) $(FLEAGS) -c $< -o $@
 clean	:
 			$(RM) $(OBJ)

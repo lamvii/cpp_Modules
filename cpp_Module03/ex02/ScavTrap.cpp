@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 23:15:54 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/25 18:22:41 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/29 00:05:26 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,13 @@ ScavTrap::ScavTrap(string name) : ClapTrap(name)
 
 ScavTrap::ScavTrap(const ScavTrap &copy)
 {
+	cout << "ScavTrap called copy constructor" << endl;
 	*this = copy;
 }
 
 ScavTrap & ScavTrap::operator=(const ScavTrap &other)
 {
-	// whithout using get :) let the base operater = do the work
+	cout << "ScavTrap called assignment operator" << endl;
 	ClapTrap::operator=(other);
 	return (*this);
 }
