@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 19:04:15 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/30 19:28:17 by ael-idri         ###   ########.fr       */
+/*   Created: 2022/08/30 23:03:17 by ael-idri          #+#    #+#             */
+/*   Updated: 2022/08/30 23:05:18 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
 
-Dog::Dog() : Animal("Dog")
+WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
-	cout << "Dog default constructor called" << endl;
+	cout << "WrongCat default constructor called" <<endl;
 }
 
-Dog::Dog(const Dog &copy)
+WrongCat::WrongCat(const WrongCat &copy)
 {
-	cout << "Dog copy constructor called" << endl;
+	cout << "WrongCat copy constructor called" << endl;
 	*this = copy;
 }
 
-Dog& Dog::operator = (const Dog &other)
+WrongCat& WrongCat::operator = (const WrongCat &other)
 {
-	cout << "Dog assignment operator called" << endl;
+	cout << "WrongCat assignment operator called" << endl;
 	this->set_type(other.get_type());
 	return (*this);
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-	cout << "Dog destructor called" << endl;
+	cout << "WrongCat destructor called" << endl;
 }
 
-void	Dog::makeSound( void ) const
+void	WrongCat::makeSound( void ) const
 {
-	cout << get_type() << " : Baark Bark B.. !!" << endl;
+	cout << get_type() << " : Moeww Moew !!" << endl;
 }

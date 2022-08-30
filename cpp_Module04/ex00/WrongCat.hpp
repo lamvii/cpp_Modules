@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/27 17:55:26 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/30 19:28:12 by ael-idri         ###   ########.fr       */
+/*   Created: 2022/08/30 23:03:14 by ael-idri          #+#    #+#             */
+/*   Updated: 2022/08/30 23:04:20 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Dog : public Animal
+class  WrongCat:public WrongAnimal
 {
+	
 	public:
-		Dog();
-		Dog(const Dog &copy);
-		Dog &operator = (const Dog &other);
-		~Dog();
+		WrongCat();
+		WrongCat(const WrongCat &copy);
+		WrongCat &operator = (const WrongCat &other);
+		~WrongCat();
 		void	makeSound( void ) const;
 };
