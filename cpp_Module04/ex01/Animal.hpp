@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/27 17:47:31 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/30 19:35:27 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/31 00:35:26 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Animal
 		Animal(string);
 		Animal(const Animal &copy);
 		Animal &operator = (const Animal &other);
-		~Animal();
+		virtual ~Animal();
 		void set_type(const string);
 		string get_type() const;
 		virtual void	makeSound( void ) const;

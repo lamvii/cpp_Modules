@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:03:34 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/30 19:27:48 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/31 00:31:21 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 Cat::Cat() : Animal("Cat")
 {
 	cout << "Cat default constructor called" <<endl;
+	brain = new Brain();
 }
 
 Cat::Cat(const Cat &copy)
@@ -28,12 +29,15 @@ Cat& Cat::operator = (const Cat &other)
 {
 	cout << "Cat assignment operator called" << endl;
 	this->set_type(other.get_type());
+	this->brain = new Brain();
+	*(this->brain) = *(other.brain);
 	return (*this);
 }
 
 Cat::~Cat()
 {
 	cout << "Cat destructor called" << endl;
+	delete brain;
 }
 
 void	Cat::makeSound( void ) const

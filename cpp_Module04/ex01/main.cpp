@@ -6,36 +6,27 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 18:57:33 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/30 23:23:52 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/31 01:10:02 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongCat.hpp"
 
 int main(void)
 {
-	// const Animal* meta = new Animal();
-	// const Animal* dogPtr = new Dog();
-	// const Animal* catPtr = new Cat();
+	Dog *dog = new Dog();
+	Dog *dog2 = new Dog(*dog);
+	Cat *cat = new Cat();
+	Cat *cat2 = new Cat(*cat);
 
 
-	// std::cout << dogPtr->get_type() << " " << std::endl;
-	// std::cout << catPtr->get_type() << " " << std::endl;
-	// dogPtr->makeSound(); //will output the cat sound!
-	// catPtr->makeSound();
-	// meta->makeSound();
+	Animal *arry[4] = {dog, dog2, cat, cat2};
 
-	const WrongAnimal* wrongcatPtr = new WrongCat();
-	std::cout << wrongcatPtr->get_type() << " " << std::endl;
-
-	wrongcatPtr->makeSound();
-
-	// delete meta;
-	// delete dogPtr;
-	// delete catPtr;
-	// delete wrongcatPtr;
+	for (int i = 0; i < 4; i++)
+		arry[i]->makeSound();
 	
+	for (int i = 0; i < 4; i++)
+		arry[i]->~Animal();
 	return 0;
 }

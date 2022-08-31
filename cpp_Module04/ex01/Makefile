@@ -6,16 +6,16 @@
 #    By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/27 17:45:59 by ael-idri          #+#    #+#              #
-#    Updated: 2022/08/30 23:07:52 by ael-idri         ###   ########.fr        #
+#    Updated: 2022/08/31 00:50:38 by ael-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC		=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
+SRC		=	main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
 OBJ		=	$(SRC:.cpp=.o)
 CC		=	g++
 FLEAGS	=	-Wall -Wextra -Werror -std=c++98 
-NAME	=	AnimalSounds
-HEADERS	=	Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
+NAME	=	AnimalWithBrain
+HEADERS	=	Animal.hpp Cat.hpp Dog.hpp Brain.hpp
 RM		=	rm -rf
 
 all 	:	$(NAME)
