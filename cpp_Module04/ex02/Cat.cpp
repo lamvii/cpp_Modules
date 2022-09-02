@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:03:34 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/31 00:31:21 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/02 01:41:46 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ Cat::Cat(const Cat &copy)
 Cat& Cat::operator = (const Cat &other)
 {
 	cout << "Cat assignment operator called" << endl;
+	if (this == &other)
+		return (*this);
 	this->set_type(other.get_type());
 	this->brain = new Brain();
 	*(this->brain) = *(other.brain);

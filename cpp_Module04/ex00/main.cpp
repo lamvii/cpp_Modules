@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 18:57:33 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/30 23:07:19 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/08/30 23:23:52 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ int main(void)
 	std::cout << wrongcatPtr->get_type() << " " << std::endl;
 
 	wrongcatPtr->makeSound();
+
+	// delete meta;
+	// delete dogPtr;
+	// delete catPtr;
+	// delete wrongcatPtr;
 	
 	return 0;
 }

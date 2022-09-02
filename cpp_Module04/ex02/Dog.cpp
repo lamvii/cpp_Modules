@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:04:15 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/31 01:06:57 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/02 01:41:52 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ Dog::Dog(const Dog &copy)
 Dog& Dog::operator = (const Dog &other)
 {
 	cout << "Dog assignment operator called" << endl;
+	if (this == &other)
+		return (*this);
 	this->set_type(other.get_type());
 	this->brain = new Brain();
 	*(this->brain) = *(other.brain);
