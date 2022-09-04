@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:03:34 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/02 01:41:46 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/04 17:06:58 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ Cat& Cat::operator = (const Cat &other)
 	if (this == &other)
 		return (*this);
 	this->set_type(other.get_type());
+	if (this->brain)
+		delete this->brain;
 	this->brain = new Brain();
 	*(this->brain) = *(other.brain);
 	return (*this);

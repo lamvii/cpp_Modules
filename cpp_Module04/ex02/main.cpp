@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 18:57:33 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/08/31 01:25:03 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/04 17:13:45 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int main(void)
 		arry[i]->makeSound();
 	
 	for (int i = 0; i < 4; i++)
-		arry[i]->~Animal();
+		delete	arry[i];
+	
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 19:04:15 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/02 01:25:10 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/04 17:15:04 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ Dog& Dog::operator = (const Dog &other)
 	if (this == &other)
 		return (*this);
 	this->set_type(other.get_type());
+	if (this->brain)
+		delete this->brain;
 	this->brain = new Brain();
 	*(this->brain) = *(other.brain);
 	// this->brain = other.brain;
