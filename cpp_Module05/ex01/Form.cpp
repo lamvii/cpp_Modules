@@ -1,0 +1,89 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/06 00:00:33 by ael-idri          #+#    #+#             */
+/*   Updated: 2022/09/06 00:28:08 by ael-idri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Form.hpp"
+
+MyException Form::GradeTooHighException("Form :GradeTooHighException");
+MyException	Form::GradeTooLowException("Form :GradeTooLowException (case besigned the bureaucrat have a grade low than the required one)");
+
+Form::Form() : name("default form"), _signed(false), _signe_grade(150),
+    _signe_execute(0)
+{
+}
+
+Form::Form(string name, int grade, int execute): name(name), _signed(false),
+    _signe_grade(grade), _signe_execute(execute)
+{
+    if (grade < 1)
+		throw Form::GradeTooHighException;
+	if (grade > 150)
+		throw Form::GradeTooLowException;
+}
+
+Form::Form(const Form & copy): name(copy.name), _signed(false),
+    _signe_grade(copy._signe_grade), _signe_execute(copy._signe_execute)
+{
+}
+
+Form &Form::operator = (const Form & other)
+{
+    this->_signed = other._signed;
+    return (*this);
+}
+
+Form::~Form()
+{
+}
+
+const string& Form::get_name() const
+{
+    return (name);
+}
+
+const bool &Form::get_signed() const
+{
+    return (_signed);
+}
+
+const int &Form::get_signed_grade() const
+{
+    return (_signe_grade);
+}
+
+const int &Form::get_signed_execute() const
+{
+    return (_signe_execute);
+}
+
+void Form::beSigned(Bureaucrat bcrat)
+{
+    if (bcrat.getGrade() <= this->get_signed_grade())
+    {
+        this->_signed = true;
+        bcrat.signForm(*this);
+    }
+    else
+    {
+        bcrat.signForm(*this);
+        throw Form::GradeTooLowException;
+    }
+}
+
+std::ostream  &operator << (std::ostream &os, const Form &form)
+{
+    cout << form.get_name() << " form that required grade " << form.get_signed_grade() << " to besigne and grade " << form.get_signed_execute() << " to execute, with a status ";
+    if (form.get_signed())
+        cout << "SIGNED ";
+    else
+        cout << "NOT SIGNED ";
+    return (os);
+}
