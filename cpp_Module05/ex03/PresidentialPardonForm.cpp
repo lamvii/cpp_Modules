@@ -6,19 +6,19 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 23:27:48 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/06 23:55:08 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/07 21:30:23 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
 
-PresidentialPardonForm::PresidentialPardonForm(): Form("Shrubbery form", 25, 5)
+PresidentialPardonForm::PresidentialPardonForm(): Form("Presidential request", 25, 5)
 {
     Form::set_target("default target");
 }
 
-PresidentialPardonForm::PresidentialPardonForm(string target): Form("Shrubbery form", 25, 5)
+PresidentialPardonForm::PresidentialPardonForm(string target): Form("Presidential request", 25, 5)
 {
     Form::set_target(target);
 }

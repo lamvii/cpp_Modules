@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 00:00:33 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/06 23:55:30 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/07 22:03:15 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void Form::beSigned(Bureaucrat bcrat)
 void Form::execute(Bureaucrat const & executor) const
 {
     if (!this->get_signed())
-        throw ("this form  NotSigned");
+        throw ("Bureaucrat couldn't execute this form (NotSigned) yet .");
     else if (executor.getGrade() <= this->get_signed_execute())
         this->beExecute();
     else

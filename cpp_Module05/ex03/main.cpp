@@ -6,45 +6,87 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 00:38:23 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/07 00:04:27 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/07 22:30:10 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ShrubberyCreationForm.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
+#include "Intern.hpp"
+
 
 int main()
 {
-	Bureaucrat sama(140, "sama");
 	Bureaucrat hliwa(2, "7liwa");
 {
-	ShrubberyCreationForm form("plant");
-	PresidentialPardonForm form2("pardon");
-	RobotomyRequestForm form3("rob");
-	sama.signForm(form);
-	sama.signForm(form2);
-	sama.signForm(form3);
-
-	sama.executeForm(form);
-	sama.executeForm(form2);
-	sama.executeForm(form3);
+	try
+	{
+		Intern someRandomIntern;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		hliwa.signForm(*rrf);
+		hliwa.executeForm(*rrf);
+		delete rrf;
+	}
+	catch(const char *error)
+	{
+		std::cerr << error << endl;
+	}
 }
 
-	cout << "end test 1" << endl;
+	cout << endl << "end test robotomy" << endl << endl;
 
 {
-	ShrubberyCreationForm form("plant");
-	PresidentialPardonForm form2("pardon");
-	RobotomyRequestForm form3("rob");
-	hliwa.signForm(form);
-	hliwa.signForm(form2);
-	hliwa.signForm(form3);
-
-	hliwa.executeForm(form);
-	hliwa.executeForm(form2);
-	hliwa.executeForm(form3);
+	try
+	{
+		Intern someRandomIntern;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("Presidential request", "Bender");
+		hliwa.signForm(*rrf);
+		hliwa.executeForm(*rrf);
+		delete rrf;
+	}
+	catch(const char *error)
+	{
+		std::cerr << error << endl;
+	}
 }
 	
-	cout << "end test 2" << endl;
+	cout << endl << "end test Presidential" << endl << endl;
+
+{
+	try
+	{
+		Intern someRandomIntern;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("Shrubbery request", "Bender");
+		hliwa.signForm(*rrf);
+		hliwa.executeForm(*rrf);
+		delete rrf;		
+	}
+	catch(const char *error)
+	{
+		std::cerr << error << endl;
+	}
+	
+}
+
+	cout << endl << "end test Shrubbery" << endl << endl;
+
+{
+	try
+	{
+		Intern someRandomIntern;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("request", "Bender");
+		hliwa.signForm(*rrf);
+		hliwa.executeForm(*rrf);
+		delete rrf;
+	}
+	catch(const char *error)
+	{
+		std::cerr << error << endl;
+	}
+	
+}
+
+	cout << endl << "end test random request" << endl << endl;
 }
