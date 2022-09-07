@@ -6,17 +6,17 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 00:00:33 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/06 00:28:08 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/06 23:52:02 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
 MyException Form::GradeTooHighException("Form :GradeTooHighException");
-MyException	Form::GradeTooLowException("Form :GradeTooLowException (case besigned the bureaucrat have a grade low than the required one)");
+MyException	Form::GradeTooLowException("Form :GradeTooLowException");
 
 Form::Form() : name("default form"), _signed(false), _signe_grade(150),
-    _signe_execute(0)
+    _signe_execute(1)
 {
 }
 
@@ -67,23 +67,17 @@ const int &Form::get_signed_execute() const
 void Form::beSigned(Bureaucrat bcrat)
 {
     if (bcrat.getGrade() <= this->get_signed_grade())
-    {
         this->_signed = true;
-        bcrat.signForm(*this);
-    }
     else
-    {
-        bcrat.signForm(*this);
         throw Form::GradeTooLowException;
-    }
 }
 
 std::ostream  &operator << (std::ostream &os, const Form &form)
 {
-    cout << form.get_name() << " form that required grade " << form.get_signed_grade() << " to besigne and grade " << form.get_signed_execute() << " to execute, with a status ";
+    cout << form.get_name() << " form that required grade " << form.get_signed_grade() << " to besigne and grade " << form.get_signed_execute() << " to execute, now  the form is :";
     if (form.get_signed())
-        cout << "SIGNED ";
+        cout << "SIGNED. ";
     else
-        cout << "NOT SIGNED ";
+        cout << "NOT SIGNED, ";
     return (os);
 }

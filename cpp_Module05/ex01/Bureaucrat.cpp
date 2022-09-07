@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 00:54:12 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/06 00:27:59 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/06 18:16:35 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,17 @@ std::ostream & operator << (std::ostream &os, const Bureaucrat &Bcrat)
 void Bureaucrat::signForm(Form &form)
 {
 	if (form.get_signed())
-		cout << *this << " signed " << form << endl;
+		cout << *this << " couldn’t sign " << form  << "because its already signed" <<endl;
 	else
-		cout << *this << " couldn’t sign " << form  << "because  reason" <<endl;
+	{
+		try
+		{
+			form.beSigned(*this);
+			cout << *this << " signed " << form << endl;
+		}
+		catch(std::exception & e)
+		{
+			cout << *this << " couldn’t sign " << form  << "because Bureaucrat grade isn't hight enough" << endl;
+		}
+	}		
 }
