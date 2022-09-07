@@ -6,19 +6,19 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 23:24:51 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/06 23:54:40 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/07 21:30:48 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
 
-ShrubberyCreationForm::ShrubberyCreationForm(): Form("Shrubbery form", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(): Form("Shrubbery request", 145, 137)
 {
     Form::set_target("default target");
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(string target): Form("Shrubbery form", 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(string target): Form("Shrubbery request", 145, 137)
 {
     Form::set_target(target);
 }

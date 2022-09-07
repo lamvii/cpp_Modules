@@ -6,19 +6,19 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 23:25:25 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/06 23:54:19 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/07 21:24:24 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
 
-RobotomyRequestForm::RobotomyRequestForm(): Form("Shrubbery form", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(): Form("robotomy request", 72, 45)
 {
     Form::set_target("default target");
 }
 
-RobotomyRequestForm::RobotomyRequestForm(string target): Form("Shrubbery form", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(string target): Form("robotomy request", 72, 45)
 {
     Form::set_target(target);
 }
