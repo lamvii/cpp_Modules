@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 23:25:25 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/07 21:24:24 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/08 22:11:38 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,9 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 void RobotomyRequestForm::beExecute() const
 {
-    int j = 0;
+    static int j = 0;
     cout << "[ some drilling noises ]: $#%#$%$% ----v vvvvv ^&$&$ " << endl;
-    for (int i = 0; i < 10; i++)
-        j += rand() % 2;
-    if (j > 5)
+    if (++j % 2)
         cout << this->get_target() <<" has been robotomized successfully 50% of the time." << endl;
     else
         cout << this->get_target() <<" robotomized failed." << endl;

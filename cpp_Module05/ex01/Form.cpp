@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 00:00:33 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/06 23:52:02 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/08 21:33:39 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ Form::Form() : name("default form"), _signed(false), _signe_grade(150),
 Form::Form(string name, int grade, int execute): name(name), _signed(false),
     _signe_grade(grade), _signe_execute(execute)
 {
-    if (grade < 1)
+    if (grade < 1 || execute < 1)
 		throw Form::GradeTooHighException;
-	if (grade > 150)
+	if (grade > 150 || execute > 150)
 		throw Form::GradeTooLowException;
 }
 
