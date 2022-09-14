@@ -6,7 +6,7 @@
 #    By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 20:24:15 by ael-idri          #+#    #+#              #
-#    Updated: 2022/09/14 20:25:27 by ael-idri         ###   ########.fr        #
+#    Updated: 2022/09/14 20:31:39 by ael-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC		=	main.cpp Conversion.cpp
 OBJ		=	$(SRC:.cpp=.o)
 CC		=	c++
 FLEAGS	=	-Wall -Wextra -Werror -std=c++98 
-NAME	=	Forms
+NAME	=	conversion
 HEADERS	=	Conversion.hpp
 RM		=	rm -rf
 
