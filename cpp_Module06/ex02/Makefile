@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/09/14 20:24:15 by ael-idri          #+#    #+#              #
-#    Updated: 2022/09/14 20:44:26 by ael-idri         ###   ########.fr        #
+#    Created: 2022/09/15 22:08:08 by ael-idri          #+#    #+#              #
+#    Updated: 2022/09/15 22:09:16 by ael-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC		=	main.cpp Conversion.cpp
+SRC		=	main.cpp
 OBJ		=	$(SRC:.cpp=.o)
 CC		=	c++
 FLEAGS	=	-Wall -Wextra -Werror -std=c++98
-NAME	=	conversion
-HEADERS	=	Conversion.hpp
+NAME	=	whatType
+HEADERS	=	Base.hpp  A.hpp B.hpp C.hpp
 RM		=	rm -rf
 
 all 	:	$(NAME)

@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Data.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 21:28:46 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/15 20:32:05 by ael-idri         ###   ########.fr       */
+/*   Created: 2022/09/15 22:10:26 by ael-idri          #+#    #+#             */
+/*   Updated: 2022/09/15 22:10:37 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Conversion.hpp"
+#include "Data.hpp"
 
-int main(int ac, char **av)
+Data::Data(/* args */): i(0)
 {
-    Conversion conv;
-
-    if (ac != 2)
-    {
-        conv._guide();
-        return (1);
-    }
-    conv.parsing(av[1]);
 }
-// what about .0f...
+
+Data::Data(int j): i (j)
+{
+}
+
+Data::Data(const Data &copy): i (copy.i)
+{
+}
+
+Data &Data::operator = (const Data &other)
+{
+	this->i = other.i;
+	return (*this);
+}
+
+Data::~Data()
+{
+}
+
+void	Data::display()
+{
+	cout << "Data value is :" << this->i << endl;
+}

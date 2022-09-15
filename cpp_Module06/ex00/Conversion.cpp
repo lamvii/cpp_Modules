@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 20:30:35 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/14 20:31:16 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/15 20:33:07 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void Conversion::convertFromChar()
 		flag[f_float] = Printable;
 	c_double = static_cast<double>(c_char);
 		flag[f_double] = Printable;
+	this->display();
 }
 
 void Conversion::convertFromInt()
@@ -82,6 +83,7 @@ void Conversion::convertFromInt()
 		c_double = static_cast<double>(c_int);
 			flag[f_double] = Printable;
 	}
+	this->display();
 	// case int impossible --> char impos(non sense) --> float double impos(non sense)
 }
 
@@ -114,6 +116,7 @@ void Conversion::convertFromFloat()
 		c_double = static_cast<double>(c_float);
 			flag[f_double] = Printable;
 	}
+	this->display();
 	// case float impossible nan -inf ..
 }
 
@@ -149,6 +152,7 @@ void Conversion::convertFromDouble()
 		else
 			flag[f_float] = Printable;
 	}
+	this->display();
 }
 
 void Conversion::parsing(string av)
@@ -272,9 +276,9 @@ void Conversion::display()
 	else if (c_float == -std::numeric_limits<float>::infinity())
 		cout << "float	:	-inff" << endl;
 	else
-		cout << "float	:	" << c_float << endl;
+		cout << "float	:	" << std::fixed  << std::setprecision(1) << c_float  << "f"<< endl;
 	if (flag[f_double] == Impossible)
 		cout << "double	:	Impossible" << endl;
 	else
-		cout << "double	:	" << c_double << endl;
+		cout << "double	:	" << std::fixed << std::setprecision(1) << c_double << endl;
 }

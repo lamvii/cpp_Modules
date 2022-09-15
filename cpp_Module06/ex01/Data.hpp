@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 21:28:46 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/15 20:32:05 by ael-idri         ###   ########.fr       */
+/*   Created: 2022/09/15 21:23:26 by ael-idri          #+#    #+#             */
+/*   Updated: 2022/09/15 22:10:23 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Conversion.hpp"
+#pragma once 
 
-int main(int ac, char **av)
+#include <iostream>
+
+using std::cout;
+using std::endl;
+using std::string;
+
+class Data
 {
-    Conversion conv;
+	int i;
+public:
+	Data();
+	Data(int j);
+	Data(const Data &);
+	Data &operator = (const Data &);
+	~Data();
+	void	display();
+};
 
-    if (ac != 2)
-    {
-        conv._guide();
-        return (1);
-    }
-    conv.parsing(av[1]);
-}
-// what about .0f...

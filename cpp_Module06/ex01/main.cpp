@@ -5,22 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 21:28:46 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/15 20:32:05 by ael-idri         ###   ########.fr       */
+/*   Created: 2022/09/15 21:23:23 by ael-idri          #+#    #+#             */
+/*   Updated: 2022/09/15 22:02:02 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Conversion.hpp"
+#include "Data.hpp"
 
-int main(int ac, char **av)
+uintptr_t serialize(Data* ptr)
 {
-    Conversion conv;
-
-    if (ac != 2)
-    {
-        conv._guide();
-        return (1);
-    }
-    conv.parsing(av[1]);
+	return (reinterpret_cast<uintptr_t>(ptr));
 }
-// what about .0f...
+
+Data* deserialize(uintptr_t raw)
+{
+	return (reinterpret_cast<Data *>(raw));
+}
+
+int main(void)
+{
+	Data * o = new Data(10);
+	Data * c;
+
+	uintptr_t i;
+	
+	
+	i = serialize(o);
+
+	c = deserialize(i);
+	c->display();
+
+}

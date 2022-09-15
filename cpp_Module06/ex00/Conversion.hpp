@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:36:35 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/14 20:30:33 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/15 20:26:03 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <sstream>
 #include <limits>
 #include <cmath>
+#include <iomanip>
 
 using std::cout;
 using std::endl;
