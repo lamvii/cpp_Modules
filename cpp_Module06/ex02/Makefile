@@ -6,11 +6,11 @@
 #    By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/15 22:08:08 by ael-idri          #+#    #+#              #
-#    Updated: 2022/09/15 22:09:16 by ael-idri         ###   ########.fr        #
+#    Updated: 2022/09/16 14:05:40 by ael-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC		=	main.cpp
+SRC		=	main.cpp Base.cpp
 OBJ		=	$(SRC:.cpp=.o)
 CC		=	c++
 FLEAGS	=	-Wall -Wextra -Werror -std=c++98

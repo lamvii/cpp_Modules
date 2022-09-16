@@ -1,26 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 22:09:50 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/16 14:04:50 by ael-idri         ###   ########.fr       */
+/*   Created: 2022/09/16 14:05:09 by ael-idri          #+#    #+#             */
+/*   Updated: 2022/09/16 14:05:23 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Base.hpp"
 
-#include <iostream>
-#include <cmath>
-
-using std::cout;
-using std::endl;
-using std::string;
-
-class Base
+Base::~Base()
 {
-public:
-	virtual ~Base();
-};
+}
