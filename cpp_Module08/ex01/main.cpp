@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:03:23 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/22 15:03:25 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/23 22:36:19 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 int main()
 {
     Span sp = Span(500);
-
+    Span sp2 = Span(10);
+    std::vector<int>  mvector(100, 50);
     
     try
     {
@@ -36,8 +37,21 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
+    
+    try
+    {
+        sp2.addRangeIterator(mvector.begin(), mvector.end());
 
-    // test iterators...catch exception..
+
+        std::cout << sp.shortestSpan() << std::endl;
+        std::cout << sp.longestSpan() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+    
     
     return 0;
 }

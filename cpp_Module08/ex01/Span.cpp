@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:03:32 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/22 15:03:34 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/23 22:33:57 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,3 @@ int Span::longestSpan()
 }
 
 
-template <class T>
-void Span::addRangeIterator(typename T::iterator first , typename T::iterator last)
-{
-    while (first!=last)
-    {
-        this->vect.push_back(*first);
-        ++first;
-    }
-}
