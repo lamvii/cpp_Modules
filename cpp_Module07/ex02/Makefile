@@ -6,7 +6,7 @@
 #    By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/19 16:43:12 by ael-idri          #+#    #+#              #
-#    Updated: 2022/09/19 23:51:42 by ael-idri         ###   ########.fr        #
+#    Updated: 2022/09/22 20:07:37 by ael-idri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC		=	main.cpp
 OBJ		=	$(SRC:.cpp=.o)
 CC		=	c++
 FLEAGS	=	-Wall -Wextra -Werror -std=c++98
-NAME	=	iter
+NAME	=	array
 HEADERS	=	array.hpp
 RM		=	rm -rf
 
