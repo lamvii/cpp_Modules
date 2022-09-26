@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:03:14 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/23 19:56:29 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/26 11:04:55 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main()
 {
     std::vector<int> myvector;
-    std::vector<int> const &myvector2 = myvector;
+    std::vector<int> const &myvector2 = std::vector<int>(10,20);
 
     myvector.push_back(10);
     myvector.push_back(11);
@@ -30,7 +30,7 @@ int main()
     std::cout << std::endl;
     
     easyfind< std::vector<int> >(myvector, 13);
-    easyfind< std::vector<int> >(myvector2, 13);
+    easyfind(myvector2, 13);
     
     
     const std::list<int> mylist(myvector.begin(), myvector.end());

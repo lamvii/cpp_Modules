@@ -6,7 +6,7 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:03:09 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/23 19:56:07 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/26 11:01:46 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int easyfind (T container, int integer)
     it = std::find<typename T::iterator ,int>(container.begin(), container.end(), integer);
     if (it != container.end())
     std::cout << "Element found in container: " << *it << '\n';
-  else
+    else
     std::cout << "Element not found in container\n";
     return (*it);
 }

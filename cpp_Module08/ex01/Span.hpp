@@ -6,16 +6,16 @@
 /*   By: ael-idri <ael-idri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 15:03:36 by ael-idri          #+#    #+#             */
-/*   Updated: 2022/09/23 22:35:54 by ael-idri         ###   ########.fr       */
+/*   Updated: 2022/09/26 15:38:58 by ael-idri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include <exception>
 #include <algorithm>
 #include <vector>
-#include <exception>
 
 class MyException: public std::exception
 {
@@ -48,7 +48,7 @@ public:
     {
         unsigned int span = last - first; 
         if (span + vect.size() > this->size)
-            throw MyException("range given is out of bounds");
+            throw std::out_of_range("range given pass the bounds");
         while (first != last)
         {
             this->vect.push_back(*first);
